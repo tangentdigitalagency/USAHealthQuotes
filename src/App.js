@@ -5,7 +5,7 @@ import Assurance from './Component/Assurance';
 // import "./index.css";
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ContextApiProvider from './context';
-
+// this is coment
 const App = () => {
 	return (
 		<>
