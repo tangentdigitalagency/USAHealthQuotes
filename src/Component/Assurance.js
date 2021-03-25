@@ -4,6 +4,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import { FormControl, InputLabel, MenuItem, Select, TextField } from '@material-ui/core';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import { Link } from 'react-router-dom';
+import { Checkbox } from 'antd';
 import { ContextApi } from '../context';
 import './Home.css';
 import '../Main.css';
@@ -61,27 +62,28 @@ function Step3() {
 	if (context.currentStep !== 3) {
 		return null;
 	}
+
 	return (
 		<React.Fragment>
 			<div className='form-group'>
 				<label>What is total your household income?</label>
 				<div className='steo-frm'>
-					<Button onClick={() => context._next('$47,000+')} size='md' variant='secondary' className='light-shadow'>
+					<Button onClick={() => context._next(3)} size='md' variant='secondary' className='light-shadow'>
 						$47,000+
 					</Button>
 				</div>
 				<div className='steo-frm'>
-					<Button onClick={() => context._next('$30,000 - $47,000')} size='md' variant='secondary' className='light-shadow'>
+					<Button onClick={() => context._next(2)} size='md' variant='secondary' className='light-shadow'>
 						$30,000 - $47,000
 					</Button>
 				</div>
 				<div className='steo-frm'>
-					<Button onClick={() => context._next('$16,000 - $30,000')} size='md' variant='secondary' className='light-shadow'>
+					<Button onClick={() => context._next(1)} size='md' variant='secondary' className='light-shadow'>
 						$16,000 - $30,000
 					</Button>
 				</div>
 				<div className='steo-frm'>
-					<Button onClick={() => context._next('$0 - $16,000')} size='md' variant='secondary' className='light-shadow'>
+					<Button onClick={() => context._next(0)} size='md' variant='secondary' className='light-shadow'>
 						$0 - $16,000
 					</Button>
 				</div>
@@ -125,7 +127,7 @@ function Step5() {
 							<InputLabel id='demo-simple-select-outlined-label'>Month</InputLabel>
 							<Select labelId='demo-simple-select-outlined-label' id='demo-simple-select-outlined' name='month' value={context.month} onChange={context.handleChangeDate1} label='Month'>
 								{['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].map((month, id) => (
-									<MenuItem key={id} value={10}>
+									<MenuItem key={id} value={month}>
 										{month}
 									</MenuItem>
 								))}
@@ -232,7 +234,7 @@ function Step9() {
 						<InputLabel id='demo-simple-select-outlined-label'>Month</InputLabel>
 						<Select labelId='demo-simple-select-outlined-label' id='demo-simple-select-outlined' name='month2' value={context.month2} onChange={context.handleChangeDate2} label='Month'>
 							{['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'].map((month, id) => (
-								<MenuItem key={id} value={10}>
+								<MenuItem key={id} value={month}>
 									{month}
 								</MenuItem>
 							))}
@@ -315,17 +317,78 @@ function Step12() {
 					NO
 				</Button>
 			</div>
+		</div>
+	);
+}
+
+function Step13() {
+	const context = useContext(ContextApi);
+
+	if (context.currentStep !== 13) {
+		return null;
+	}
+	return (
+		<div className='form-group'>
+			<label>Last step! Your quote is ready.</label>
+			<Row>
+				<Col lg={6} xs={12}>
+					<div className='frm-step'>
+						<TextField type='text' className='fullWidth responsiveField' id='outlined-basic' name='first_name' onChange={context.changeLastStepForm} label='First Name' variant='outlined' />
+					</div>
+				</Col>
+				<Col lg={6} xs={12}>
+					<div className='frm-step'>
+						<TextField type='text' className='fullWidth responsiveField' id='outlined-basic' name='last_name' onChange={context.changeLastStepForm} label='Last Name' variant='outlined' />
+					</div>
+				</Col>
+				<Col lg={6} xs={12}>
+					<div className='frm-step'>
+						<TextField type='text' required className='fullWidth responsiveField' id='outlined-basic' name='phone_cell' onChange={context.changeLastStepForm} label='Phone' variant='outlined' />
+					</div>
+				</Col>
+				<Col lg={6} xs={12}>
+					<div className='frm-step'>
+						<TextField type='text' required className='fullWidth responsiveField' id='outlined-basic' name='email_address' onChange={context.changeLastStepForm} label='Email' variant='outlined' />
+					</div>
+				</Col>
+				<Col lg={12} xs={12}>
+					<Checkbox checked={context.agree} style={{ lineHeight: '1rem' }} onChange={context.onChangeAgree}>
+						By clicking the View My Quote Button, I agree to the contents below the button.
+					</Checkbox>
+				</Col>
+				<Col lg={12} xs={12}>
+					<div className='steo-frm'>
+						<Button disabled={context.email_address === '' || context.phone_cell === '' || !context.agree} onClick={context._next} size='md' variant='secondary' className='light-shadow'>
+							VIEW MY QUOTE
+						</Button>
+					</div>
+				</Col>
+				<Col lg={12} xs={12}>
+					<div className='terms-and-condition'>
+						<div>
+							<strong>Consent to Be Contacted.</strong> I agree to be contacted by select insurance carriers and financial institutions listed <a href='/'>here</a>, their agents, individual insurance agents, and/or Assurance for marketing purposes concerning insurance and/or other
+							financial products by phone/text at my number provided above (including by authodialer, prerecorded message and/or artificial voice), even if my number is on a do not call list, or by email at the email address I have provided. Texts about these offers may be sent from
+							Assurance's Shpeer Alerts number, 71953 (message & data rates may apply). Consent is not required to make a purchase and I can opt out any time.
+						</div>
+						<div>
+							<strong>Consent to Share Information.</strong> I agree to Assurance sharing my information with Prudential companies and affiliates so that they can market their products and services to me, and to Assurance sharing my information with third-party partners so that select
+							insurers and financial institutions, and their agents, may make insurance, credit and other financial offers to me. I agree to Assurance's <a href='/'>Privacy Policy</a> and <a href='/'>Terms of Service.</a>
+						</div>
+						<div>
+							<strong>Medicare.</strong> If I am Medicare-eligible, I am requesting to speak with a licensed agent who is certified to discuss medicare Advantage and Prescription Drug insurance plans. This will NOT obligate me to enroll in a plan, affect my current enrollment, or
+							enroll me in a Medicare plan.
+						</div>
+					</div>
+				</Col>
+			</Row>
+
 			<Modal show={context.show} onHide={context.handleClose}>
-				{/* <Modal.Header closeButton>
-        </Modal.Header> */}
 				<Modal.Body>
 					<Row className='bht-ye'>
-						<Col xd={2} md={{ span: 8, offset: 2 }}>
-							Redirecting you to our ACA portal to view your options.
-						</Col>
-						<Col xd={2} md={{ span: 6, offset: 3 }}>
-							<div className='so-frm'>
-								<Button size='md' variant='secondary' className='light-shadow'>
+						<Col xs={12}>Redirecting you to our ACA portal to view your options.</Col>
+						<Col xs={12}>
+							<div className='so-frm text-center'>
+								<Button onClick={context.reset} size='md' variant='secondary' className='light-shadow'>
 									SEE ACA PLAN{' '}
 								</Button>
 							</div>
@@ -386,6 +449,7 @@ class Assurance extends Component {
 								<Step10 />
 								<Step11 />
 								<Step12 />
+								<Step13 />
 							</Col>
 						</Row>
 					</Container>

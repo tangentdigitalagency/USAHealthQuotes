@@ -2,6 +2,7 @@ import React, { Component, createContext } from 'react';
 import axios from 'axios';
 export const ContextApi = createContext();
 
+const incoms = [10000, 47000, 30000, 16000];
 class ContextApiProvider extends Component {
 	state = {
 		currentStep: 1,
@@ -18,10 +19,17 @@ class ContextApiProvider extends Component {
 		year2: '',
 		date2: '',
 		month2: '',
+		first_name: '',
+		last_name: '',
+		email_address: '',
+		phone_cell: '',
 		spouseUseTobaco: '',
 		includeChildren: '',
 		weight: '',
 		show: false,
+		agree: false,
+		pre_exisiting_conditions: true,
+		landing_page: 'http://localhost:3000',
 	};
 
 	_next = async (value) => {
@@ -33,7 +41,7 @@ class ContextApiProvider extends Component {
 		}
 		if (this.state.currentStep === 3) {
 			this.setState({
-				householdIncome: value,
+				householdIncome: incoms[value],
 			});
 		}
 		if (this.state.currentStep === 4) {
@@ -70,22 +78,29 @@ class ContextApiProvider extends Component {
 			this.setState({
 				weight: value,
 			});
+		}
+		if (this.state.currentStep === 13) {
 			let leadId = document.getElementById('leadid_token').value;
-			let data = {
-				lp_campaign_id: '601a0da83281b',
-				lp_campaign_key: 'DvKL4cVyGh697dwNbJCY',
-				lp_test: 1,
-				health_insurance_plan: 'ACA PLAN',
-				coverage_time: this.state.coverage,
-				zip_code: this.state.zip,
-				household_income: '15000',
-				gender: this.state.gender.toLowerCase(),
-				tobacco_use: this.state.tobaco === 'YES' ? true : false,
-				weight: this.state.weight === 'YES' ? true : false,
-				jornaya_lead_id: leadId,
-			};
+			let formData = new FormData();
+			formData.append('lp_campaign_id', '601a0da83281b');
+			formData.append('lp_campaign_key', 'DvKL4cVyGh697dwNbJCY');
+			// formData.append('lp_test', 1);
+			formData.append('health_insurance_plan', 'ACA PLAN');
+			formData.append('coverage_time', this.state.coverage);
+			formData.append('zip_code', this.state.zip);
+			formData.append('household_income', this.state.householdIncome);
+			formData.append('gender', this.state.gender.toLowerCase());
+			formData.append('tobacco_use', this.state.tobaco === 'YES' ? true : false);
+			formData.append('weight', this.state.weight === 'YES' ? true : false);
+			formData.append('jornaya_lead_id', leadId);
+			formData.append('first_name', this.state.first_name);
+			formData.append('last_name', this.state.last_name);
+			formData.append('email_address', this.state.email_address);
+			formData.append('phone_cell', this.state.phone_cell);
+			formData.append('landing_page', this.state.landing_page);
+			formData.append('pre_exisiting_conditions', this.state.pre_exisiting_conditions);
 			try {
-				let insurance = await axios.post('https://quotehound.leadspediatrack.com/post.do', data);
+				let insurance = await axios.post('https://quotehound.leadspediatrack.com/post.do', formData);
 				console.log(insurance);
 				if (insurance.status === 201 || insurance.status === 200) {
 					console.log(insurance);
@@ -100,7 +115,7 @@ class ContextApiProvider extends Component {
 				}
 			}
 		}
-		currentStep = currentStep >= 11 ? 12 : currentStep + 1;
+		currentStep = currentStep >= 12 ? 13 : currentStep + 1;
 		if (this.state.currentStep === 7 && value === 'NO') {
 			currentStep = 11;
 		}
@@ -133,6 +148,51 @@ class ContextApiProvider extends Component {
 			show: false,
 		});
 	};
+	onChangeAgree = (e) => {
+		console.log(`checked = ${e.target.checked}`);
+		this.setState({
+			agree: e.target.checked,
+		});
+	};
+
+	changeLastStepForm = (e) => {
+		const { name, value } = e.target;
+		this.setState((prevState) => {
+			return {
+				...prevState,
+				[name]: value,
+			};
+		});
+	};
+	reset = () => {
+		this.setState({
+			currentStep: 1,
+			zip: '',
+			coverage: '',
+			householdIncome: '',
+			gender: '',
+			tobaco: '',
+			includeSpouce: '',
+			spouceGender: '',
+			year: '',
+			date: '',
+			month: '',
+			year2: '',
+			date2: '',
+			month2: '',
+			first_name: '',
+			last_name: '',
+			email_address: '',
+			phone_cell: '',
+			spouseUseTobaco: '',
+			includeChildren: '',
+			weight: '',
+			show: false,
+			agree: false,
+			pre_exisiting_conditions: true,
+			landing_page: 'http://localhost:3000',
+		});
+	};
 	render() {
 		return (
 			<ContextApi.Provider
@@ -144,6 +204,9 @@ class ContextApiProvider extends Component {
 					handleChangeDate2: this.handleChangeDate2,
 					handleShow: this.handleShow,
 					handleClose: this.handleClose,
+					onChangeAgree: this.onChangeAgree,
+					changeLastStepForm: this.changeLastStepForm,
+					reset: this.reset,
 				}}>
 				{this.props.children}
 			</ContextApi.Provider>

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Main from './Main';
+import LandingPage from './LandingPage';
 import Assurance from './Component/Assurance';
 // import "./index.css";
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -11,7 +12,8 @@ const App = () => {
 		<>
 			<ContextApiProvider>
 				<Switch>
-					<Route exact path='/' component={Main} />
+					<Route exact path='/' component={LandingPage} />
+					<Route exact path='/main' component={Main} />
 					<Route exact path='/assurance' component={Assurance} />
 					<Redirect to='/' />
 				</Switch>
