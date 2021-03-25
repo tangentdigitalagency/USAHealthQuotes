@@ -400,7 +400,7 @@ function Step13() {
 	);
 }
 
-class Assurance extends Component {
+class Insurance extends Component {
 	static contextType = ContextApi;
 	render() {
 		return (
@@ -474,7 +474,7 @@ class Assurance extends Component {
 					</Row>
 					<Row className='fooot-r'>
 						<Col xd={2} md={{ offset: 5 }}>
-							© Copyright Assurance.com 2021
+							© Copyright Free Medicare Quote 2021
 						</Col>
 					</Row>
 				</Container>
@@ -483,4 +483,4 @@ class Assurance extends Component {
 	}
 }
 
-export default Assurance;
+export default Insurance;
