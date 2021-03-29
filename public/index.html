@@ -37,19 +37,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-		<!-- Generate a TrustedForm Certificate -->
 		<script id="LeadiDscript" type="text/javascript">
-			(function () {
-				var s = document.createElement('script');
-				s.id = 'LeadiDscript_campaign';
-				s.type = 'text/javascript';
-				s.async = true;
-				s.src = '//create.lidstatic.com/campaign/34d2f2a1-8501-5c98-0b11-a2d0480484fe.js?snippet_version=2';
-				var LeadiDscript = document.getElementById('LeadiDscript');
-				LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-			})();
-		</script>
-		<noscript><img src="//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=34d2f2a1-8501-5c98-0b11-a2d0480484fe&snippet_version=2" /></noscript>
+(function() {
+var s = document.createElement('script');
+s.id = 'LeadiDscript_campaign';
+s.type = 'text/javascript';
+s.async = true;
+s.src = '//create.lidstatic.com/campaign/34d2f2a1-8501-5c98-0b11-a2d0480484fe.js?snippet_version=2';
+var LeadiDscript = document.getElementById('LeadiDscript');
+LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+})();
+</script>
+<noscript><img src='//create.leadid.com/noscript.gif?lac=45a2434e-3343-bea3-12ad-6220f9a33148&lck=34d2f2a1-8501-5c98-0b11-a2d0480484fe&snippet_version=2' /></noscript>
 		<!-- <script type="text/javascript">
 			(function () {
 				var field = 'trusted_form_cert_id';

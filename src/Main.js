@@ -47,11 +47,6 @@ function Main() {
 									</Button>
 								</Link>
 							</div>
-							<div className='aca-plan'>
-								<Button size='md' variant='secondary' className='light-shadow'>
-									SHORT-TERM OPTIONS
-								</Button>
-							</div>
 						</Col>
 					</Row>
 				</Container>
@@ -76,7 +71,7 @@ function Main() {
 				</Row>
 				<Row className='fooot-r'>
 					<Col xd={2} md={{ offset: 5 }}>
-						© Copyright Assurance.com 2021
+						© Copyright USA 2021
 					</Col>
 				</Row>
 			</Container>
