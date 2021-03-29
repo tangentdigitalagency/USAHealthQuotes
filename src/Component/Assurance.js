@@ -400,6 +400,15 @@ function Step13() {
 	);
 }
 
+function Step14() {
+	const context = useContext(ContextApi);
+
+	if (context.currentStep !== 14) {
+		return null;
+	}
+	return <div id='mediaalpha_placeholder'></div>;
+}
+
 class Assurance extends Component {
 	static contextType = ContextApi;
 	render() {
@@ -450,6 +459,7 @@ class Assurance extends Component {
 								<Step11 />
 								<Step12 />
 								<Step13 />
+								<Step14 />
 							</Col>
 						</Row>
 					</Container>

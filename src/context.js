@@ -104,9 +104,20 @@ class ContextApiProvider extends Component {
 				console.log(insurance);
 				if (insurance.status === 201 || insurance.status === 200) {
 					console.log(insurance);
-					this.setState({
-						show: true,
-					});
+					// this.setState({
+					// 	show: true,
+					// });
+					window.MediaAlphaExchange = {
+						data: {
+							zip: this.state.zip,
+						},
+						placement_id: '1WNbWprsUtu4bb-7VkTVgf2l57oZew',
+						sub_1: 'test sub id',
+						type: 'ad_unit',
+						ua_class: 'auto',
+						version: 17,
+					};
+					window.MediaAlphaExchange__load('mediaalpha_placeholder');
 				}
 			} catch (err) {
 				console.log(err);
@@ -115,7 +126,7 @@ class ContextApiProvider extends Component {
 				}
 			}
 		}
-		currentStep = currentStep >= 12 ? 13 : currentStep + 1;
+		currentStep = currentStep >= 13 ? 14 : currentStep + 1;
 		if (this.state.currentStep === 7 && value === 'NO') {
 			currentStep = 11;
 		}
