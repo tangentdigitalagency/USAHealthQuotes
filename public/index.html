@@ -37,6 +37,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+	
+	<!-- Generate a TrustedForm Certificate -->
+	<script type="text/javascript">
+		(function () {
+			var field = 'trusted_form_cert_id';
+			var provideReferrer = false;
+			var tf = document.createElement('script');
+			tf.type = 'text/javascript'; tf.async = true;
+			tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') +
+				'://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l=' + new Date().getTime() + Math.random();
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+		}
+		)();
+	</script>
+
+	<!-- Lead Id Script
 		<script id="LeadiDscript" type="text/javascript">
 (function() {
 var s = document.createElement('script');
@@ -48,21 +65,8 @@ var LeadiDscript = document.getElementById('LeadiDscript');
 LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
 })();
 </script>
-<input id="leadid_token" name="universal_leadid" type="hidden" value="" />
+<input id="leadid_token" name="universal_leadid" type="hidden" value="" /> -->
 
-
-		<script type="text/javascript">
-			(function () {
-				var field = 'trusted_form_cert_id';
-				var provideReferrer = false;
-				var tf = document.createElement('script');
-				tf.type = 'text/javascript';
-				tf.async = true;
-				tf.src = 'http' + ('https:' == document.location.protocol ? 's' : '') + '://api.trustedform.com/trustedform.js?provide_referrer=' + escape(provideReferrer) + '&field=' + escape(field) + '&l=' + new Date().getTime() + Math.random();
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(tf, s);
-			})();
-		</script>
 
 	</body>
 </html>
