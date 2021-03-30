@@ -1,15 +1,18 @@
 import React from 'react';
 import { Nav, Navbar, Container, Row, Col, Button } from 'react-bootstrap';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+import Icon from './assets/img/icon.png';
 import { Link } from 'react-router-dom';
 import './Main.css';
+
+
 function Main() {
 	return (
 		<div className='main-container'>
 			<div className='white-bfr container'>
 				<Navbar expand='lg' bg='' variant=''>
 					<Navbar.Brand href='/'>
-						<img className='logo' alt='Assurance logo' src='https://smart.assurance.com/static/media/assurance.645c2c4b.png' />
+						<img className='logo' alt='Quotehound logo' src='https://assets.website-files.com/5dfd95f78d0e1ee3b32e0f58/5dfd965f8d0e1e23372e0fad_Quotehound%2520Primary%2520Logo%2520-%2520transparent%2520rasterized%2520(1)-p-500.png' />
 					</Navbar.Brand>
 
 					<div className='right-navbar'>
@@ -32,16 +35,14 @@ function Main() {
 					<Row>
 						<Col lg={6} xs={12}>
 							<div className='circle-wrapper'>
-								<span className='inner-circle'>
-									<PersonOutlineIcon className='persn-zoom' />
-								</span>
+								<img src={Icon} className="sideForm"/>
 							</div>
 						</Col>
 
 						<Col lg={6} xs={12}>
 							<div className='health'>What type of Health Insurance plan are you looking for?</div>
 							<div className='aca-pla'>
-								<Link to='./Assurance'>
+								<Link to='/insurance'>
 									<Button size='md' variant='secondary' className='light-shadow'>
 										ACA PLAN
 									</Button>
@@ -65,13 +66,11 @@ function Main() {
 					<Col xd={2} md={{ span: 2 }}>
 						<Link to=''>Insurance Licenses</Link>
 					</Col>
-					<Col className='accredit' xd={2} md={{ span: 1, offset: 2 }}>
-						<img className='sc-hzDkRC ktpqZY' alt='Better Business Bureau Accredited A+ Rating' src='https://smart.assurance.com/static/media/bbb-logo.425e0e00.svg' />
-					</Col>
+					
 				</Row>
 				<Row className='fooot-r'>
 					<Col xd={2} md={{ offset: 5 }}>
-						© Copyright USA 2021
+						© Copyright Quotehound  2021
 					</Col>
 				</Row>
 			</Container>

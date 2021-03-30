@@ -30,6 +30,8 @@ class ContextApiProvider extends Component {
 		agree: false,
 		pre_exisiting_conditions: true,
 		landing_page: 'http://localhost:3000',
+		lp_s1: '12',
+		lp_s2: '13'
 	};
 
 	_next = async (value) => {
@@ -81,6 +83,7 @@ class ContextApiProvider extends Component {
 		}
 		if (this.state.currentStep === 13) {
 			let leadId = document.getElementById('leadid_token').value;
+			let trusted_form_cert_id = document.getElementById("trusted_form_cert_id_0").value;
 			let formData = new FormData();
 			formData.append('lp_campaign_id', '601a0da83281b');
 			formData.append('lp_campaign_key', 'DvKL4cVyGh697dwNbJCY');
@@ -93,6 +96,7 @@ class ContextApiProvider extends Component {
 			formData.append('tobacco_use', this.state.tobaco === 'YES' ? true : false);
 			formData.append('weight', this.state.weight === 'YES' ? true : false);
 			formData.append('jornaya_lead_id', leadId);
+			formData.append('trusted_form_cert_id', trusted_form_cert_id);
 			formData.append('first_name', this.state.first_name);
 			formData.append('last_name', this.state.last_name);
 			formData.append('email_address', this.state.email_address);

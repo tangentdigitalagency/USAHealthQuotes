@@ -2,7 +2,7 @@ import React, { Component, useContext } from 'react';
 import { Nav, Navbar, Container, Row, Col, Button, Modal } from 'react-bootstrap';
 import DoneIcon from '@material-ui/icons/Done';
 import { FormControl, InputLabel, MenuItem, Select, TextField } from '@material-ui/core';
-import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+import Icon from '../assets/img/icon.png';
 import { Link } from 'react-router-dom';
 import { Checkbox } from 'antd';
 import { ContextApi } from '../context';
@@ -366,17 +366,7 @@ function Step13() {
 				<Col lg={12} xs={12}>
 					<div className='terms-and-condition'>
 						<div>
-							<strong>Consent to Be Contacted.</strong> I agree to be contacted by select insurance carriers and financial institutions listed <a href='/'>here</a>, their agents, individual insurance agents, and/or Assurance for marketing purposes concerning insurance and/or other
-							financial products by phone/text at my number provided above (including by authodialer, prerecorded message and/or artificial voice), even if my number is on a do not call list, or by email at the email address I have provided. Texts about these offers may be sent from
-							Assurance's Shpeer Alerts number, 71953 (message & data rates may apply). Consent is not required to make a purchase and I can opt out any time.
-						</div>
-						<div>
-							<strong>Consent to Share Information.</strong> I agree to Assurance sharing my information with Prudential companies and affiliates so that they can market their products and services to me, and to Assurance sharing my information with third-party partners so that select
-							insurers and financial institutions, and their agents, may make insurance, credit and other financial offers to me. I agree to Assurance's <a href='/'>Privacy Policy</a> and <a href='/'>Terms of Service.</a>
-						</div>
-						<div>
-							<strong>Medicare.</strong> If I am Medicare-eligible, I am requesting to speak with a licensed agent who is certified to discuss medicare Advantage and Prescription Drug insurance plans. This will NOT obligate me to enroll in a plan, affect my current enrollment, or
-							enroll me in a Medicare plan.
+						By hitting submit above , I provide my express written consent to the following. Telemarketing calls, text messages, emails, and postal mail from this Web site, ourmarketing and re-marketing network, and up to eight insurance companies or their affiliates  or representatives at the phone number (including wireless number), email address, and postal address provided by me. Telemarketing calls, text messages, emails, and postal mail (including wireless number), email address, and postal address provided by me. Calls and text messages transmitting insurance quotes, or seeking related additional information from me, using an Automated Telephone Dialing System or prerecorded or artificial voices. Electronic video monitoring and recordation of my activities on this Site; and I acknowledge that I may revoke my consent at any time by Calling1 888-316-1350 or emailing “STOP” to optout@quotehound.com.I AGREE TO ALL OF THE ABOVE AND SEND MY QUOTE
 						</div>
 					</div>
 				</Col>
@@ -417,7 +407,7 @@ class Insurance extends Component {
 				<div className='white-bfr container'>
 					<Navbar expand='lg' bg='' variant=''>
 						<Navbar.Brand href='/'>
-							<img className='logo' alt='Assurance logo' src='https://smart.assurance.com/static/media/assurance.645c2c4b.png' />
+							<img className='logo' alt='' src='https://assets.website-files.com/5dfd95f78d0e1ee3b32e0f58/5dfd965f8d0e1e23372e0fad_Quotehound%2520Primary%2520Logo%2520-%2520transparent%2520rasterized%2520(1)-p-500.png' />
 						</Navbar.Brand>
 
 						<div className='right-navbar'>
@@ -440,9 +430,7 @@ class Insurance extends Component {
 						<Row>
 							<Col lg={6} xs={12}>
 								<div className='circle-wrapper'>
-									<span className='inner-circle'>
-										<PersonOutlineIcon className='persn-zoom' />
-									</span>
+									<img src={Icon} className="sideForm" />
 								</div>
 							</Col>
 							<Col className='health' lg={6} xs={12}>
@@ -478,13 +466,11 @@ class Insurance extends Component {
 						<Col xd={2} md={{ span: 2 }}>
 							<Link to=''>Insurance Licenses</Link>
 						</Col>
-						<Col className='accredit' xd={2} md={{ span: 1, offset: 2 }}>
-							<img className='sc-hzDkRC ktpqZY' alt='Better Business Bureau Accredited A+ Rating' src='https://smart.assurance.com/static/media/bbb-logo.425e0e00.svg' />
-						</Col>
+						
 					</Row>
 					<Row className='fooot-r'>
 						<Col xd={2} md={{ offset: 5 }}>
-							© Copyright Free Medicare Quote 2021
+							© Copyright Quotehound 2021
 						</Col>
 					</Row>
 				</Container>

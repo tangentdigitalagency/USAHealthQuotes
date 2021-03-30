@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card, Col, Collapse, Layout, Row } from 'antd';
-import logo from './assets/img/logo.png';
+import logo from './assets/img/logoQh.png';
 import farmers from './assets/img/farmers.png';
 import progressive from './assets/img/progressive.png';
 import travelers from './assets/img/travelers.png';
@@ -50,9 +50,9 @@ function LandingPage() {
 									<div className='block-left-hero'>
 										<Row>
 											<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-												<h1 className='hero_heading'>Better Coverage with Quantum. Get a free Commercial Insurance Quote</h1>
+												<h1 className='hero_heading'>Better Coverage with Quotehound. Get a free Commercial Insurance Quote</h1>
 												<p className='text-white para-white'>
-													A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quantum today
+													A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quotehound today
 													and see if your business qualifies for Business Owners Policy.{' '}
 												</p>
 												<Button onClick={handleRoute} type='block ' size='large' className='btn-large text-blue'>
@@ -109,14 +109,14 @@ function LandingPage() {
 						<Row>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<p>
-									A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quantum Assurance today and see
+									A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quotehound Assurance today and see
 									if your business qualifies for Business Owners Policy.{' '}
 								</p>
 								<p>
 									These policies are better suited for smaller businesses as they have more personal financial exposure in the event of a loss. As a business owner, you must ensure that all aspects of your business are covered. From property damage to legal liabilities to
 									employee-related risk.
 								</p>
-								<p>At Quantum, we offer the best coverage available for your business. Get your free quote today and check out what would be the best fit for your business.</p>
+								<p>At Quotehound, we offer the best coverage available for your business. Get your free quote today and check out what would be the best fit for your business.</p>
 								<Button type='block ' size='large' className='btn-large text-white bg-blue'>
 									Start Your Free Qoute <ArrowRightOutlined />
 								</Button>
@@ -170,7 +170,7 @@ function LandingPage() {
 										<h1>Why Us?</h1>
 										<p>
 											Receiving a quote from an agent, company, or website can feel like a long process. But don’t let that push you into settling for the first quote you receive. Instead, you’re likely to find a much better deal if you’re willing to shop around. This is where
-											Quantum comes in.
+											Quotehound comes in.
 										</p>
 										<Row className='mt-1 '>
 											<Col span={24}>
@@ -216,7 +216,7 @@ function LandingPage() {
 								<h1>What you need to know when choosing an insurer</h1>
 								<p>Nobody enjoys dealing with things they don’t understand—especially when they have to pay for it</p>
 								<p>For example, can you imagine putting yourself into debt just for the privilege of learning a bunch of facts and figures that you’ll probably never use again?</p>
-								<p>Thankfully, Quantum has you covered when it comes to understanding car insurance.</p>
+								<p>Thankfully, Quotehound has you covered when it comes to understanding car insurance.</p>
 								<Row className='mt-1 '>
 									<Col span={24}>
 										<Button type='block ' size='large' className='btn-large text-white bg-blue'>
@@ -316,8 +316,8 @@ function LandingPage() {
 								<img src={quote} alt='quote' width='21' className='quote' />
 								<p className='quote-text-v1'>
 									<em className='font-italic italic-text-4'>
-										“I have never had such a great experience getting insurance quotes than I had using Quantum. &nbsp;Their form is super quick and simple. &nbsp;As soon as I hit submit, they matched me with a great insurance agent named Sandy. &nbsp;I had all the information
-										and quotes I had to make the decision to switch my insurance. &nbsp;Thank you Quantum for the great connection! ”<br />
+										“I have never had such a great experience getting insurance quotes than I had using Quotehound. &nbsp;Their form is super quick and simple. &nbsp;As soon as I hit submit, they matched me with a great insurance agent named Sandy. &nbsp;I had all the information
+										and quotes I had to make the decision to switch my insurance. &nbsp;Thank you Quotehound for the great connection! ”<br />
 									</em>
 								</p>
 								<p>Matthew</p>
@@ -350,7 +350,7 @@ function LandingPage() {
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quick and reliable</p>
 											</Col>
 											<Col xs={{ span: 24 }}>
-												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quantum gives you tips!</p>
+												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quotehound gives you tips!</p>
 											</Col>
 											<Col xs={{ span: 24 }}>
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Secure and safe</p>
@@ -401,7 +401,8 @@ function LandingPage() {
 				<Footer className='footer'>
 					<div className='footer-container'>
 						<div className='footer-top-wrap-2'>
-							<h1 className='heading-16'>Quantum Assurance International</h1>
+							<h1 className='heading-16'>Quotehound</h1>
+							
 						</div>
 						<div className='div-block-58'></div>
 					</div>
