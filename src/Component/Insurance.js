@@ -136,7 +136,7 @@ function Step5() {
 						</FormControl>
 					</Col>
 					<Col xd={2} md={{ span: 4 }}>
-						<TextField type='text' id='outlined-basic' className='responsiveField' label='Date' name='date' value={context.date} onChange={context.handleChangeDate1} variant='outlined' />
+						<TextField type='text' id='outlined-basic' className='responsiveField' label='Day' name='date' value={context.date} onChange={context.handleChangeDate1} variant='outlined' />
 					</Col>
 					<Col xd={2} md={{ span: 4 }}>
 						<TextField type='text' id='outlined-basic' className='responsiveField' label='Year' name='year' value={context.year} onChange={context.handleChangeDate1} variant='outlined' />
