@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, Navbar, Container, Row, Col, Button } from 'react-bootstrap';
+import healthLogo from './assets/img/healthLogo.png';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import Icon from './assets/img/icon.png';
 import { Link } from 'react-router-dom';
@@ -12,10 +13,10 @@ function Main() {
 			<div className='white-bfr container'>
 				<Navbar expand='lg' bg='' variant=''>
 					<Navbar.Brand href='/'>
-						<img className='logo' alt='Quotehound logo' src='https://assets.website-files.com/5dfd95f78d0e1ee3b32e0f58/5dfd965f8d0e1e23372e0fad_Quotehound%2520Primary%2520Logo%2520-%2520transparent%2520rasterized%2520(1)-p-500.png' />
+					<img src={healthLogo} width='181' alt='logo' />
 					</Navbar.Brand>
 
-					<div className='right-navbar'>
+					{/* <div className='right-navbar'>
 						<p>
 							<b>Help Need? </b>
 						</p>
@@ -27,7 +28,7 @@ function Main() {
 							src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHZSURBVHgBrVaLUcJAEH04FKAVeFYgVGAqUGxAMjYAHUAFkgoAK0AbkKEB0AYkVAAVqPu4vckZ87kMvpk35O52993ubS60UA8jvBN2lCvhEP+ESLgU7oWJsKeC5xU+VWt/DCfCrQo5GBWKSvwuhBvhNL9wlhsb2N23hF3hu3AEm80CtmyXJQJvwleNOUVFBtz9WMeRBh+jugwuA9pdaYxlmdDEExipcccTTDRYUiMQw1ZiLnzyBSI1IHr6bDSDhY4H+H3wZQIOFPr07I/p9TWIL7DN7dxHV4PcFwg4kS83MMiyYP/P9HmOrHyoENqX2HFtDS+w263LIkImXAeXUb45Yujhs91uYMvFQz4IUzUYIwyH3C/R0o2unAh3sIPNYKdGfBc+EIYH4UvB/K0TaWuwFFknwZurA7uKlXjMzfdVOMWJYElY5mHBPM/IBMQ4ZjaoWGcXTgrm6TNFoABfNLbnKLdmYDMoen9YvjUCsnACY9iO+1ahCNl10yvw4w3AMvXRQMAge+M3uvsBii9L36+xQK1TEwGo4aShQKeB7RGxOoQ4cffuY9ZDQ8TqaAKCzxD4TW/nxnP95SHzCud9xJJcw3YXn59hL8UUJyKGbV2WjldNoiLB/0Z8/AA9Qnx/iv07ywAAAABJRU5ErkJggg=='
 							style={{ width: '24px', height: '24px' }}
 						/>
-					</div>
+					</div> */}
 				</Navbar>
 			</div>
 			<div className='container'>
@@ -70,7 +71,7 @@ function Main() {
 				</Row>
 				<Row className='fooot-r'>
 					<Col xd={2} md={{ offset: 5 }}>
-						© Copyright Quotehound  2021
+						© Copyright USA Health Quotes  2021
 					</Col>
 				</Row>
 			</Container>

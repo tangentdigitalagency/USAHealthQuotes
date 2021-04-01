@@ -7,6 +7,7 @@ import travelers from './assets/img/travelers.png';
 import stateAuto from './assets/img/state-auto.png';
 import heroImg from './assets/img/newHero.jpg';
 import connectImg from './assets/img/connection.png';
+import healthLogo from './assets/img/healthLogo.png';
 import whatImg from './assets/img/car.jpeg';
 import quote from './assets/img/quote.png';
 import canvas from './assets/img/canvas.png';
@@ -33,8 +34,8 @@ function LandingPage() {
 				<Header>
 					<Row>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-							<a href='https://www.quantumassurance.com/quotes/business/business-insurance'>
-								<img src={logo} width='181' alt='logo' />
+							<a href='#'>
+								<img src={healthLogo} width='181' alt='logo' />
 							</a>
 						</Col>
 						<Col xs={{ span: 24 }} lg={{ span: 12 }} className='text-right'>
@@ -50,13 +51,12 @@ function LandingPage() {
 									<div className='block-left-hero'>
 										<Row>
 											<Col xs={{ span: 24 }} lg={{ span: 12 }}>
-												<h1 className='hero_heading'>Better Coverage with Quotehound. Get a free Commercial Insurance Quote</h1>
+												<h1 className='hero_heading'>Health Insurance: Simplified..</h1>
 												<p className='text-white para-white'>
-													A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quotehound today
-													and see if your business qualifies for Business Owners Policy.{' '}
+												We have Health Insurance plans for seniors, students, and everyone in between. Get the right plan at the right price.{' '}
 												</p>
 												<Button onClick={handleRoute} type='block ' size='large' className='btn-large text-blue'>
-													Free Commercial Quote <ArrowRightOutlined />
+													Free Health Quote <ArrowRightOutlined />
 												</Button>
 											</Col>
 											<Col xs={{ span: 24 }} lg={{ span: 11, offset: 1 }}>
@@ -103,20 +103,21 @@ function LandingPage() {
 					<section className='container'>
 						<Row>
 							<Col span={24}>
-								<h1 className='font-weight-bold ml-md-5'>Business insurance</h1>
+								<h1 className='font-weight-bold ml-md-5'>Health Insurance for Individuals and Family</h1>
 							</Col>
 						</Row>
 						<Row>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<p>
-									A business owners policy includes protection for all major property and liability risk in one package. Offers protection to business owners against property damage, peril, business interruption, and liability. Get a free quote with Quotehound Assurance today and see
-									if your business qualifies for Business Owners Policy.{' '}
+								Individual and family health insurance plans can help cover expenses in the case of serious medical emergencies, 
+and help you and your family stay on top of preventative health-care services. {' '}
 								</p>
 								<p>
-									These policies are better suited for smaller businesses as they have more personal financial exposure in the event of a loss. As a business owner, you must ensure that all aspects of your business are covered. From property damage to legal liabilities to
-									employee-related risk.
+								Having health insurance coverage can save you money on doctor's visits, prescriptions drugs, 
+preventative care and other health-care services. 
 								</p>
-								<p>At Quotehound, we offer the best coverage available for your business. Get your free quote today and check out what would be the best fit for your business.</p>
+								<p>Typical health insurance plans for individuals include costs such as a monthly premium, annual deductible, 
+copayments, and coinsurance.</p>
 								<Button type='block ' size='large' className='btn-large text-white bg-blue'>
 									Start Your Free Qoute <ArrowRightOutlined />
 								</Button>
@@ -129,27 +130,27 @@ function LandingPage() {
 					<section className='container  my-3'>
 						<Row>
 							<Col span={24}>
-								<h3 className='mx-auto text-center'>You should consider a Business Owners Policy if you:</h3>
+								<h3 className='mx-auto text-center'>You should consider a Health Insurance if you:</h3>
 							</Col>
 						</Row>
 						<Row className='mt-3'>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<ul>
 									<li className='list-item-2'>
-										<h6 className='h6-heading list'>Need general liability insurance coverage</h6>
+										<h6 className='h6-heading list'>Need help with medical bills.</h6>
 									</li>
 									<li className='list-item-2'>
-										<h6 className='h6-heading list'>If you have business equipment that you want to make sure is protected</h6>
+										<h6 className='h6-heading list'>Need health services.</h6>
 									</li>
 								</ul>
 							</Col>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
 								<ul>
 									<li className='list-item-2'>
-										<h6 className='h6-heading list'>If you happen to own the building that you work at </h6>
+										<h6 className='h6-heading list'>Need constant check ups or appointments. </h6>
 									</li>
 									<li className='list-item-2'>
-										<h6 className='h6-heading list'>If you have employees that you don’t consider to be trustworthy</h6>
+										<h6 className='h6-heading list'>Need a way to keep your family safe.</h6>
 									</li>
 								</ul>
 							</Col>
@@ -169,8 +170,9 @@ function LandingPage() {
 									<div className='justify-content-center align-self-center'>
 										<h1>Why Us?</h1>
 										<p>
-											Receiving a quote from an agent, company, or website can feel like a long process. But don’t let that push you into settling for the first quote you receive. Instead, you’re likely to find a much better deal if you’re willing to shop around. This is where
-											Quotehound comes in.
+										<b> We are Committed to Finding Our Customers the Right Health Insurance. </b> <br/>
+Fast free quotes, and licensed health insurance agents are here to help find the plan that's right for you.
+
 										</p>
 										<Row className='mt-1 '>
 											<Col span={24}>
@@ -216,7 +218,7 @@ function LandingPage() {
 								<h1>What you need to know when choosing an insurer</h1>
 								<p>Nobody enjoys dealing with things they don’t understand—especially when they have to pay for it</p>
 								<p>For example, can you imagine putting yourself into debt just for the privilege of learning a bunch of facts and figures that you’ll probably never use again?</p>
-								<p>Thankfully, Quotehound has you covered when it comes to understanding car insurance.</p>
+								<p>Thankfully,  USA Health has you covered when it comes to understanding health insurance.</p>
 								<Row className='mt-1 '>
 									<Col span={24}>
 										<Button type='block ' size='large' className='btn-large text-white bg-blue'>
@@ -250,7 +252,7 @@ function LandingPage() {
 												<strong>Do you want to speak with the same agent each time you talk to your insurance company, or are you okay being assigned a new person with each new claim?</strong>
 											</p>
 											<p>
-												<strong>What types of auto insurance do you need?</strong>
+												<strong>What types of health insurance do you need?</strong>
 											</p>
 											<p>
 												<strong>Those types include liability, collision, comprehensive, personal injury, uninsured motorist, and more. How much can you afford to pay for car insurance?</strong>
@@ -274,7 +276,7 @@ function LandingPage() {
 										<div className='container text-left'>
 											<p>
 												Receiving a quote from an agent, company, or website can feel like a long process. But don’t let that push you into settling for the first quote you receive. Instead, you’re likely to find a much better deal if you’re willing to shop around. Here’s the
-												great news: Quotehound can help you save time and effort in two ways when it comes to comparing car-insurance companies and quotes.
+												great news:  USA Health can help you save time and effort in two ways when it comes to comparing car-insurance companies and quotes.
 											</p>
 											<br />
 											<p>First, offers a quick and simple way to review and compare auto-insurance d</p>
@@ -316,8 +318,8 @@ function LandingPage() {
 								<img src={quote} alt='quote' width='21' className='quote' />
 								<p className='quote-text-v1'>
 									<em className='font-italic italic-text-4'>
-										“I have never had such a great experience getting insurance quotes than I had using Quotehound. &nbsp;Their form is super quick and simple. &nbsp;As soon as I hit submit, they matched me with a great insurance agent named Sandy. &nbsp;I had all the information
-										and quotes I had to make the decision to switch my insurance. &nbsp;Thank you Quotehound for the great connection! ”<br />
+										“I have never had such a great experience getting insurance quotes than I had using  USA Health. &nbsp;Their form is super quick and simple. &nbsp;As soon as I hit submit, they matched me with a great insurance agent named Sandy. &nbsp;I had all the information
+										and quotes I had to make the decision to switch my insurance. &nbsp;Thank you  USA Health for the great connection! ”<br />
 									</em>
 								</p>
 								<p>Matthew</p>
@@ -350,7 +352,7 @@ function LandingPage() {
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quick and reliable</p>
 											</Col>
 											<Col xs={{ span: 24 }}>
-												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Quotehound gives you tips!</p>
+												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'> USA Health gives you tips!</p>
 											</Col>
 											<Col xs={{ span: 24 }}>
 												<CheckOutlined style={{ color: '#008000' }} /> <p className='d-inline ml-3 text-co2'>Secure and safe</p>
@@ -401,7 +403,7 @@ function LandingPage() {
 				<Footer className='footer'>
 					<div className='footer-container'>
 						<div className='footer-top-wrap-2'>
-							<h1 className='heading-16'>Quotehound</h1>
+							<h1 className='heading-16'> USA Health</h1>
 							
 						</div>
 						<div className='div-block-58'></div>
