@@ -1,5 +1,6 @@
 import React, { Component, createContext } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 export const ContextApi = createContext();
 
 const incoms = [10000, 47000, 30000, 16000];
@@ -49,6 +50,7 @@ class ContextApiProvider extends Component {
 				gender: value,
 			});
 		}
+
 		if (this.state.currentStep === 6) {
 			this.setState({
 				tobaco: value,
@@ -64,11 +66,13 @@ class ContextApiProvider extends Component {
 				spouceGender: value,
 			});
 		}
+
 		if (this.state.currentStep === 10) {
 			this.setState({
 				spouseUseTobaco: value,
 			});
 		}
+
 		if (this.state.currentStep === 11) {
 			this.setState({
 				includeChildren: value,
@@ -129,10 +133,12 @@ class ContextApiProvider extends Component {
 		currentStep = currentStep >= 13 ? 14 : currentStep + 1;
 		if (this.state.currentStep === 7 && value === 'NO') {
 			currentStep = 11;
+			this.props.history.push('step11');
 		}
 		this.setState({
 			currentStep: currentStep,
 		});
+		this.props.history.push('step' + currentStep);
 	};
 	zipChange = (e) => {
 		this.setState({
@@ -225,4 +231,4 @@ class ContextApiProvider extends Component {
 	}
 }
 
-export default ContextApiProvider;
+export default withRouter(ContextApiProvider);

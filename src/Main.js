@@ -41,7 +41,7 @@ function Main() {
 						<Col lg={6} xs={12}>
 							<div className='health'>What type of Health Insurance plan are you looking for?</div>
 							<div className='aca-pla'>
-								<Link to='./Assurance'>
+								<Link to='./Step1'>
 									<Button size='md' variant='secondary' className='light-shadow'>
 										ACA PLAN
 									</Button>
