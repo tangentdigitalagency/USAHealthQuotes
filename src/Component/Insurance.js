@@ -339,14 +339,14 @@ export function Step9() {
 						</FormControl>{' '}
 					</Col>
 					<Col xd={2} md={{ span: 4 }}>
-						<TextField type='text' id='outlined-basic' className='responsiveField' label='Date' name='date2' value={context.date2} onChange={context.handleChangeDate2} variant='outlined' />
+						<TextField type='text' id='outlined-basic' className='responsiveField' label='Day' name='Day' value={context.day} onChange={context.handleChangeDate2} variant='outlined' />
 					</Col>
 					<Col xd={2} md={{ span: 4 }}>
 						<TextField type='text' id='outlined-basic' className='responsiveField' label='Year' name='year2' value={context.year2} onChange={context.handleChangeDate2} variant='outlined' />
 					</Col>
 				</Row>
 				<div className='steo-frm'>
-					<Button onClick={context._next} size='md' disabled={context.month2 === '' || context.date2 === '' || context.year2 === ''} variant='secondary' className='light-shadow'>
+					<Button onClick={context._next} size='md' disabled={context.month2 === '' || context.day === '' || context.year2 === ''} variant='secondary' className='light-shadow'>
 						CONTINUE
 					</Button>
 				</div>
