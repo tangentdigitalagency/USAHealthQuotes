@@ -31,6 +31,7 @@ class ContextApiProvider extends Component {
 		agree: false,
 		pre_exisiting_conditions: true,
 		landing_page: 'http://localhost:3000',
+
 	};
 
 	_next = async (value) => {
@@ -84,11 +85,12 @@ class ContextApiProvider extends Component {
 			});
 		}
 		if (this.state.currentStep === 13) {
-			let leadId = document.getElementById('leadid_token').value;
+		
 			let formData = new FormData();
 			formData.append('lp_campaign_id', '601a0da83281b');
 			formData.append('lp_campaign_key', 'DvKL4cVyGh697dwNbJCY');
-			// formData.append('lp_test', 1);
+			formData.append('lp_s1', '12');
+			formData.append('lp_s2', '13');
 			formData.append('health_insurance_plan', 'ACA PLAN');
 			formData.append('coverage_time', this.state.coverage);
 			formData.append('zip_code', this.state.zip);
@@ -96,7 +98,6 @@ class ContextApiProvider extends Component {
 			formData.append('gender', this.state.gender.toLowerCase());
 			formData.append('tobacco_use', this.state.tobaco === 'YES' ? true : false);
 			formData.append('weight', this.state.weight === 'YES' ? true : false);
-			formData.append('jornaya_lead_id', leadId);
 			formData.append('first_name', this.state.first_name);
 			formData.append('last_name', this.state.last_name);
 			formData.append('email_address', this.state.email_address);
@@ -115,7 +116,7 @@ class ContextApiProvider extends Component {
 						data: {
 							zip: this.state.zip,
 						},
-						placement_id: '1WNbWprsUtu4bb-7VkTVgf2l57oZew',
+						placement_id: 'O_lLlIDgDp7Wt1W0Z2IzmjkLjux5FA',
 						sub_1: 'test sub id',
 						type: 'ad_unit',
 						ua_class: 'auto',

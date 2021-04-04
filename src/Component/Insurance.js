@@ -2,7 +2,9 @@ import React, { Component, useContext } from 'react';
 import { Nav, Navbar, Container, Row, Col, Button, Modal } from 'react-bootstrap';
 import DoneIcon from '@material-ui/icons/Done';
 import { FormControl, InputLabel, MenuItem, Select, TextField } from '@material-ui/core';
-import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+import healthLogo from '../assets/img/healthLogo.png';
+import PersonIcon from '@material-ui/icons/Person';
+import Icon from '../assets/img/icon.png';
 import { Link } from 'react-router-dom';
 import { Checkbox } from 'antd';
 import { ContextApi } from '../context';
@@ -77,7 +79,7 @@ function Layout(props) {
 						<Col lg={6} xs={12}>
 							<div className='circle-wrapper'>
 								<span className='inner-circle'>
-									<PersonOutlineIcon className='persn-zoom' />
+									<PersonIcon className='persn-zoom' />
 								</span>
 							</div>
 						</Col>
@@ -533,9 +535,7 @@ class Insurance extends Component {
 						<Row>
 							<Col lg={6} xs={12}>
 								<div className='circle-wrapper'>
-									<span className='inner-circle'>
-										<PersonOutlineIcon className='persn-zoom' />
-									</span>
+									<img src={Icon} className='sideForm' />
 								</div>
 							</Col>
 							<Col className='health' lg={6} xs={12}>
