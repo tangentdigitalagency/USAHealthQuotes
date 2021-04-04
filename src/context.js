@@ -30,7 +30,7 @@ class ContextApiProvider extends Component {
 		show: false,
 		agree: false,
 		pre_exisiting_conditions: true,
-		landing_page: 'http://localhost:3000',
+		landing_page: 'usahealthquotes.com',
 
 	};
 

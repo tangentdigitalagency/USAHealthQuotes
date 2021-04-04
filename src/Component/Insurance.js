@@ -18,10 +18,10 @@ function MainNavbar() {
 		<div className='white-bfr container'>
 			<Navbar expand='lg' bg='' variant=''>
 				<Navbar.Brand href='/'>
-					<img className='logo' alt='Assurance logo' src='https://smart.assurance.com/static/media/assurance.645c2c4b.png' />
+				<img src={healthLogo} width='181' alt='logo' />
 				</Navbar.Brand>
 
-				<div className='right-navbar'>
+				{/* <div className='right-navbar'>
 					<p>
 						<b>Help Need? </b>
 					</p>
@@ -33,7 +33,7 @@ function MainNavbar() {
 						src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHZSURBVHgBrVaLUcJAEH04FKAVeFYgVGAqUGxAMjYAHUAFkgoAK0AbkKEB0AYkVAAVqPu4vckZ87kMvpk35O52993ubS60UA8jvBN2lCvhEP+ESLgU7oWJsKeC5xU+VWt/DCfCrQo5GBWKSvwuhBvhNL9wlhsb2N23hF3hu3AEm80CtmyXJQJvwleNOUVFBtz9WMeRBh+jugwuA9pdaYxlmdDEExipcccTTDRYUiMQw1ZiLnzyBSI1IHr6bDSDhY4H+H3wZQIOFPr07I/p9TWIL7DN7dxHV4PcFwg4kS83MMiyYP/P9HmOrHyoENqX2HFtDS+w263LIkImXAeXUb45Yujhs91uYMvFQz4IUzUYIwyH3C/R0o2unAh3sIPNYKdGfBc+EIYH4UvB/K0TaWuwFFknwZurA7uKlXjMzfdVOMWJYElY5mHBPM/IBMQ4ZjaoWGcXTgrm6TNFoABfNLbnKLdmYDMoen9YvjUCsnACY9iO+1ahCNl10yvw4w3AMvXRQMAge+M3uvsBii9L36+xQK1TEwGo4aShQKeB7RGxOoQ4cffuY9ZDQ8TqaAKCzxD4TW/nxnP95SHzCud9xJJcw3YXn59hL8UUJyKGbV2WjldNoiLB/0Z8/AA9Qnx/iv07ywAAAABJRU5ErkJggg=='
 						style={{ width: '24px', height: '24px' }}
 					/>
-				</div>
+				</div> */}
 			</Navbar>
 		</div>
 	);
@@ -56,13 +56,10 @@ function Footer() {
 				<Col xd={2} md={{ span: 2 }}>
 					<Link to=''>Insurance Licenses</Link>
 				</Col>
-				<Col className='accredit' xd={2} md={{ span: 1, offset: 2 }}>
-					<img className='sc-hzDkRC ktpqZY' alt='Better Business Bureau Accredited A+ Rating' src='https://smart.assurance.com/static/media/bbb-logo.425e0e00.svg' />
-				</Col>
 			</Row>
 			<Row className='fooot-r'>
 				<Col xd={2} md={{ offset: 5 }}>
-					© Copyright Free Medicare Quote 2021
+					© CopyrightUSA Health Quotes Quote 2021
 				</Col>
 			</Row>
 		</Container>
@@ -78,9 +75,7 @@ function Layout(props) {
 					<Row>
 						<Col lg={6} xs={12}>
 							<div className='circle-wrapper'>
-								<span className='inner-circle'>
-									<PersonIcon className='persn-zoom' />
-								</span>
+							<img src={Icon} className='sideForm' />
 							</div>
 						</Col>
 						<Col className='health' lg={6} xs={12}>
@@ -229,7 +224,7 @@ export function Step5() {
 							</FormControl>
 						</Col>
 						<Col xd={2} md={{ span: 4 }}>
-							<TextField type='text' id='outlined-basic' className='responsiveField' label='Date' name='date' value={context.date} onChange={context.handleChangeDate1} variant='outlined' />
+							<TextField type='text' id='outlined-basic' className='responsiveField' label='Day' name='day' value={context.date} onChange={context.handleChangeDate1} variant='outlined' />
 						</Col>
 						<Col xd={2} md={{ span: 4 }}>
 							<TextField type='text' id='outlined-basic' className='responsiveField' label='Year' name='year' value={context.year} onChange={context.handleChangeDate1} variant='outlined' />
@@ -462,34 +457,22 @@ export function Step13() {
 						</div>
 					</Col>
 					<Col lg={12} xs={12}>
-						<Checkbox checked={context.agree} style={{ lineHeight: '1rem' }} onChange={context.onChangeAgree}>
-							By clicking the View My Quote Button, I agree to the contents below the button.
-						</Checkbox>
+						<div className='terms-and-condition'>
+							<div>
+							
+By clicking "Get My Instant Quote", you provide an electronic signature by which you agree to the following: "I give my express consent to receive emails, notifications, and calls, which may be auto-dialed, use artificial or pre-recorded voices, and/or be text messages, about auto insurance plans or products from QuoteHound, these companies, and their agents and to the email address and or telephone number(s), including wireless phone number(s), I have provided, even if I have previously registered the provided number on the Do Not Call Registry. I understand that my consent to receive calls is not required in order to purchase any property, goods or services. My telephone company may impose additional charges for messages. I may revoke my consent to receiving messages at any time. By submitting my information, I confirm that I have read, understand, and agree to these Terms of Use and Privacy Policy
+							</div>
+						</div>
 					</Col>
+					
 					<Col lg={12} xs={12}>
 						<div className='steo-frm'>
-							<Button disabled={context.email_address === '' || context.phone_cell === '' || !context.agree} onClick={context._next} size='md' variant='secondary' className='light-shadow'>
+							<Button disabled={context.email_address === '' || context.phone_cell === ''} onClick={context._next} size='md' variant='secondary' className='light-shadow'>
 								VIEW MY QUOTE
 							</Button>
 						</div>
 					</Col>
-					<Col lg={12} xs={12}>
-						<div className='terms-and-condition'>
-							<div>
-								<strong>Consent to Be Contacted.</strong> I agree to be contacted by select insurance carriers and financial institutions listed <a href='/'>here</a>, their agents, individual insurance agents, and/or Assurance for marketing purposes concerning insurance and/or other
-								financial products by phone/text at my number provided above (including by authodialer, prerecorded message and/or artificial voice), even if my number is on a do not call list, or by email at the email address I have provided. Texts about these offers may be sent
-								from Assurance's Shpeer Alerts number, 71953 (message & data rates may apply). Consent is not required to make a purchase and I can opt out any time.
-							</div>
-							<div>
-								<strong>Consent to Share Information.</strong> I agree to Assurance sharing my information with Prudential companies and affiliates so that they can market their products and services to me, and to Assurance sharing my information with third-party partners so that
-								select insurers and financial institutions, and their agents, may make insurance, credit and other financial offers to me. I agree to Assurance's <a href='/'>Privacy Policy</a> and <a href='/'>Terms of Service.</a>
-							</div>
-							<div>
-								<strong>Medicare.</strong> If I am Medicare-eligible, I am requesting to speak with a licensed agent who is certified to discuss medicare Advantage and Prescription Drug insurance plans. This will NOT obligate me to enroll in a plan, affect my current enrollment, or
-								enroll me in a Medicare plan.
-							</div>
-						</div>
-					</Col>
+					
 				</Row>
 
 				<Modal show={context.show} onHide={context.handleClose}>

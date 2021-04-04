@@ -34,9 +34,9 @@ function Main() {
 				<Container>
 					<Row>
 						<Col lg={6} xs={12}>
-							<div className='circle-wrapper'>
+							
 								<img src={Icon} className='sideForm' />
-							</div>
+						
 						</Col>
 
 						<Col lg={6} xs={12}>
@@ -62,9 +62,6 @@ function Main() {
 					</Col>
 					<Col xd={2} md={{ span: 3 }}>
 						<Link to=''>Do Not Sell My Personal Information</Link>
-					</Col>
-					<Col xd={2} md={{ span: 2 }}>
-						<Link to=''>Insurance Licenses</Link>
 					</Col>
 				</Row>
 				<Row className='fooot-r'>
