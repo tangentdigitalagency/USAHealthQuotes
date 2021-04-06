@@ -119,7 +119,7 @@ preventative care and other health-care services.
 								<p>Typical health insurance plans for individuals include costs such as a monthly premium, annual deductible, 
 copayments, and coinsurance.</p>
 								<Button type='block ' size='large' className='btn-large text-white bg-blue'>
-									Start Your Free Qoute <ArrowRightOutlined />
+									Start Your Free Quote <ArrowRightOutlined />
 								</Button>
 							</Col>
 							<Col xs={{ span: 24 }} lg={{ span: 12 }}>
@@ -177,7 +177,7 @@ Fast free quotes, and licensed health insurance agents are here to help find the
 										<Row className='mt-1 '>
 											<Col span={24}>
 												<Button type='block ' size='large' className='btn-large text-white bg-blue'>
-													Start Your Free Qoute <ArrowRightOutlined />
+													Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 											</Col>
 										</Row>
@@ -222,7 +222,7 @@ Fast free quotes, and licensed health insurance agents are here to help find the
 								<Row className='mt-1 '>
 									<Col span={24}>
 										<Button type='block ' size='large' className='btn-large text-white bg-blue'>
-											Start Your Free Qoute <ArrowRightOutlined />
+											Start Your Free Quote <ArrowRightOutlined />
 										</Button>
 									</Col>
 								</Row>
@@ -292,7 +292,7 @@ Fast free quotes, and licensed health insurance agents are here to help find the
 						<Row className='mt-1 text-center'>
 							<Col span={24}>
 								<Button type='block ' size='large' className='btn-large text-white bg-blue'>
-									Start Your Free Qoute <ArrowRightOutlined />
+									Start Your Free Quote <ArrowRightOutlined />
 								</Button>
 							</Col>
 						</Row>
@@ -326,7 +326,7 @@ Fast free quotes, and licensed health insurance agents are here to help find the
 								<Row className='mt-1'>
 									<Col span={24}>
 										<Button type='block ' size='large' className='btn-large text-white bg-blue'>
-											Start Your Free Qoute <ArrowRightOutlined />
+											Start Your Free Quote <ArrowRightOutlined />
 										</Button>
 									</Col>
 								</Row>
@@ -364,7 +364,7 @@ Fast free quotes, and licensed health insurance agents are here to help find the
 										<Row className='mt-4'>
 											<Col span={24}>
 												<Button type='block ' size='large' className='btn-large text-white bg-blue'>
-													Start Your Free Qoute <ArrowRightOutlined />
+													Start Your Free Quote <ArrowRightOutlined />
 												</Button>
 											</Col>
 										</Row>
