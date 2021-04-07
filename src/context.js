@@ -15,10 +15,10 @@ class ContextApiProvider extends Component {
 		includeSpouce: '',
 		spouceGender: '',
 		year: '',
-		date: '',
+		date: new Date(),
 		month: '',
 		year2: '',
-		date2: '',
+		date2: new Date(),
 		month2: '',
 		first_name: '',
 		last_name: '',
@@ -31,7 +31,6 @@ class ContextApiProvider extends Component {
 		agree: false,
 		pre_exisiting_conditions: true,
 		landing_page: 'usahealthquotes.com',
-
 	};
 
 	_next = async (value) => {
@@ -85,7 +84,6 @@ class ContextApiProvider extends Component {
 			});
 		}
 		if (this.state.currentStep === 13) {
-		
 			let formData = new FormData();
 			formData.append('lp_campaign_id', '601a0da83281b');
 			formData.append('lp_campaign_key', 'DvKL4cVyGh697dwNbJCY');
@@ -146,14 +144,14 @@ class ContextApiProvider extends Component {
 			zip: e.target.value,
 		});
 	};
-	handleChangeDate1 = (e) => {
+	handleChangeDate1 = (date) => {
 		this.setState({
-			[e.target.name]: e.target.value,
+			date: date,
 		});
 	};
-	handleChangeDate2 = (e) => {
+	handleChangeDate2 = (date) => {
 		this.setState({
-			[e.target.name]: e.target.value,
+			date2: date,
 		});
 	};
 	handleShow = () => {

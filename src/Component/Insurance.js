@@ -1,13 +1,15 @@
 import React, { Component, useContext } from 'react';
 import { Nav, Navbar, Container, Row, Col, Button, Modal } from 'react-bootstrap';
 import DoneIcon from '@material-ui/icons/Done';
-import { FormControl, InputLabel, MenuItem, Select, TextField } from '@material-ui/core';
+import { FormControl, InputLabel, MenuItem, Select, TextField, Grid } from '@material-ui/core';
 import healthLogo from '../assets/img/healthLogo.png';
 import PersonIcon from '@material-ui/icons/Person';
 import Icon from '../assets/img/icon.png';
 import { Link } from 'react-router-dom';
 import { Checkbox } from 'antd';
 import { ContextApi } from '../context';
+import DateFnsUtils from '@date-io/date-fns';
+import { MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker } from '@material-ui/pickers';
 import './Home.css';
 import '../Main.css';
 
@@ -18,7 +20,7 @@ function MainNavbar() {
 		<div className='white-bfr container'>
 			<Navbar expand='lg' bg='' variant=''>
 				<Navbar.Brand href='/'>
-				<img src={healthLogo} width='181' alt='logo' />
+					<img src={healthLogo} width='181' alt='logo' />
 				</Navbar.Brand>
 
 				{/* <div className='right-navbar'>
@@ -75,7 +77,7 @@ function Layout(props) {
 					<Row>
 						<Col lg={6} xs={12}>
 							<div className='circle-wrapper'>
-							<img src={Icon} className='sideForm' />
+								<img src={Icon} className='sideForm' alt='' />
 							</div>
 						</Col>
 						<Col className='health' lg={6} xs={12}>
@@ -211,7 +213,7 @@ export function Step5() {
 				<label>What is your date of birth?</label>
 				<div className='frm-step'>
 					<Row>
-						<Col xd={2} md={{ span: 4 }}>
+						{/* <Col xd={2} md={{ span: 4 }}>
 							<FormControl style={{ width: '100%' }} variant='outlined'>
 								<InputLabel id='demo-simple-select-outlined-label'>Month</InputLabel>
 								<Select labelId='demo-simple-select-outlined-label' id='demo-simple-select-outlined' name='month' value={context.month} onChange={context.handleChangeDate1} label='Month'>
@@ -225,13 +227,32 @@ export function Step5() {
 						</Col>
 						<Col xd={2} md={{ span: 4 }}>
 							<TextField type='text' id='outlined-basic' className='responsiveField' label='Day' name='day' value={context.date} onChange={context.handleChangeDate1} variant='outlined' />
-						</Col>
-						<Col xd={2} md={{ span: 4 }}>
-							<TextField type='text' id='outlined-basic' className='responsiveField' label='Year' name='year' value={context.year} onChange={context.handleChangeDate1} variant='outlined' />
-						</Col>
+						</Col> */}
+						{/* <Col xd={2} md={{ span: 4 }}>
+							<TextField type='date' id='date' defaultValue={new Date()} className='responsiveField' label='Date' name='date' value={context.date} onChange={context.handleChangeDate1} variant='outlined' />
+						</Col> */}
+
+						<MuiPickersUtilsProvider utils={DateFnsUtils}>
+							<Grid container>
+								<KeyboardDatePicker
+									disableToolbar
+									variant='inline'
+									format='MM/dd/yyyy'
+									margin='normal'
+									id='date-picker-inline'
+									label='Date'
+									value={context.date}
+									onChange={context.handleChangeDate1}
+									KeyboardButtonProps={{
+										'aria-label': 'change date',
+									}}
+									inputVariant='outlined'
+								/>
+							</Grid>
+						</MuiPickersUtilsProvider>
 					</Row>
 					<div className='steo-frm'>
-						<Button onClick={context._next} disabled={context.month === '' || context.date === '' || context.year === ''} size='md' variant='secondary' className='light-shadow'>
+						<Button onClick={context._next} disabled={context.date === ''} size='md' variant='secondary' className='light-shadow'>
 							CONTINUE
 						</Button>
 					</div>
@@ -326,7 +347,7 @@ export function Step9() {
 			<div className='form-group'>
 				<label>What is your spouse's date of birth?</label>
 				<Row>
-					<Col xd={2} md={{ span: 4 }}>
+					{/* <Col xd={2} md={{ span: 4 }}>
 						<FormControl style={{ width: '100%' }} variant='outlined'>
 							<InputLabel id='demo-simple-select-outlined-label'>Month</InputLabel>
 							<Select labelId='demo-simple-select-outlined-label' id='demo-simple-select-outlined' name='month2' value={context.month2} onChange={context.handleChangeDate2} label='Month'>
@@ -340,13 +361,32 @@ export function Step9() {
 					</Col>
 					<Col xd={2} md={{ span: 4 }}>
 						<TextField type='text' id='outlined-basic' className='responsiveField' label='Day' name='date2' value={context.date2} onChange={context.handleChangeDate2} variant='outlined' />
-					</Col>
-					<Col xd={2} md={{ span: 4 }}>
-						<TextField type='text' id='outlined-basic' className='responsiveField' label='Year' name='year2' value={context.year2} onChange={context.handleChangeDate2} variant='outlined' />
-					</Col>
+					</Col> */}
+					{/* <Col xd={2} md={{ span: 4 }}>
+						<TextField type='date' format='MM/dd/yyyy' id='date2' className='responsiveField' label='Date' name='date2' value={context.date2} onChange={context.handleChangeDate2} variant='outlined' />
+					</Col> */}
+
+					<MuiPickersUtilsProvider utils={DateFnsUtils}>
+						<Grid container>
+							<KeyboardDatePicker
+								disableToolbar
+								variant='inline'
+								format='MM/dd/yyyy'
+								margin='normal'
+								id='date-picker-inline'
+								label='Date'
+								value={context.date2}
+								onChange={context.handleChangeDate2}
+								KeyboardButtonProps={{
+									'aria-label': 'change date',
+								}}
+								inputVariant='outlined'
+							/>
+						</Grid>
+					</MuiPickersUtilsProvider>
 				</Row>
 				<div className='steo-frm'>
-					<Button onClick={context._next} size='md' disabled={context.month2 === '' || context.date2 === '' || context.year2 === ''} variant='secondary' className='light-shadow'>
+					<Button onClick={context._next} size='md' disabled={context.date2 === ''} variant='secondary' className='light-shadow'>
 						CONTINUE
 					</Button>
 				</div>
@@ -459,12 +499,14 @@ export function Step13() {
 					<Col lg={12} xs={12}>
 						<div className='terms-and-condition'>
 							<div>
-							
-By clicking "Get My Instant Quote", you provide an electronic signature by which you agree to the following: "I give my express consent to receive emails, notifications, and calls, which may be auto-dialed, use artificial or pre-recorded voices, and/or be text messages, about auto insurance plans or products from QuoteHound, these companies, and their agents and to the email address and or telephone number(s), including wireless phone number(s), I have provided, even if I have previously registered the provided number on the Do Not Call Registry. I understand that my consent to receive calls is not required in order to purchase any property, goods or services. My telephone company may impose additional charges for messages. I may revoke my consent to receiving messages at any time. By submitting my information, I confirm that I have read, understand, and agree to these Terms of Use and Privacy Policy
+								By clicking "Get My Instant Quote", you provide an electronic signature by which you agree to the following: "I give my express consent to receive emails, notifications, and calls, which may be auto-dialed, use artificial or pre-recorded voices, and/or be text
+								messages, about auto insurance plans or products from QuoteHound, these companies, and their agents and to the email address and or telephone number(s), including wireless phone number(s), I have provided, even if I have previously registered the provided number on
+								the Do Not Call Registry. I understand that my consent to receive calls is not required in order to purchase any property, goods or services. My telephone company may impose additional charges for messages. I may revoke my consent to receiving messages at any time. By
+								submitting my information, I confirm that I have read, understand, and agree to these Terms of Use and Privacy Policy
 							</div>
 						</div>
 					</Col>
-					
+
 					<Col lg={12} xs={12}>
 						<div className='steo-frm'>
 							<Button disabled={context.email_address === '' || context.phone_cell === ''} onClick={context._next} size='md' variant='secondary' className='light-shadow'>
@@ -472,7 +514,6 @@ By clicking "Get My Instant Quote", you provide an electronic signature by which
 							</Button>
 						</div>
 					</Col>
-					
 				</Row>
 
 				<Modal show={context.show} onHide={context.handleClose}>
