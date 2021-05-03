@@ -10,6 +10,15 @@
 
 }
 
+.logosTop {
+    width: 200px;
+}
+
+.h3 {
+    font-size: small;
+    color: white;
+}
+
 .section-one {
     width: 100%;
     height: 400px;
@@ -193,7 +202,7 @@
 }
 
 .service-main-image.business {
-    background-image: url("https://assets.website-files.com/5e2b3fe9d3ee94499c5186d1/602d79d329b66638f1763d05_VARIOS-07.jpg");
+    background-image: url("./assets/img/doc.jpg");
     background-size: contain;
 }
 
@@ -248,7 +257,7 @@
 }
 
 .trusted-companies {
-    background-color: #6165ff;
+    background-color:white;
 }
 
 .custom-rounded {
