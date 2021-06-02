@@ -500,7 +500,7 @@ export function Step13() {
 						<div className='terms-and-condition'>
 							<div>
 								By clicking "Get My Instant Quote", you provide an electronic signature by which you agree to the following: "I give my express consent to receive emails, notifications, and calls, which may be auto-dialed, use artificial or pre-recorded voices, and/or be text
-								messages, about auto insurance plans or products from QuoteHound, these companies, and their agents and to the email address and or telephone number(s), including wireless phone number(s), I have provided, even if I have previously registered the provided number on
+								messages, about auto insurance plans or products from QuoteHound, these <a href-="https://www.quotehound.com/partners">companies, and their agents </a> and to the email address and or telephone number(s), including wireless phone number(s), I have provided, even if I have previously registered the provided number on
 								the Do Not Call Registry. I understand that my consent to receive calls is not required in order to purchase any property, goods or services. My telephone company may impose additional charges for messages. I may revoke my consent to receiving messages at any time. By
 								submitting my information, I confirm that I have read, understand, and agree to these Terms of Use and Privacy Policy
 							</div>
@@ -510,7 +510,7 @@ export function Step13() {
 					<Col lg={12} xs={12}>
 						<div className='steo-frm'>
 							<Button disabled={context.email_address === '' || context.phone_cell === ''} onClick={context._next} size='md' variant='secondary' className='light-shadow'>
-								VIEW MY QUOTE
+								Get My Instant Quote
 							</Button>
 						</div>
 					</Col>
